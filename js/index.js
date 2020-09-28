@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation 
+const navigator = document.querySelectorAll("a");
+navigator[0].textContent = 'Services';
+navigator[1].textContent = 'Product';
+navigator[2].textContent = 'Vision';
+navigator[3].textContent = 'Features';
+navigator[4].textContent = 'About';
+navigator[5].textContent = 'Contact';
+
+//Header
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', 'img/header-img.png');
+
+let heading = document.querySelector('h1');
+heading.textContent = siteContent["cta"]["h1"];
+
+document.querySelector('button').textContent = siteContent['cta']['button'];
+
+//Paragraph Content
+const pArray = document.querySelectorAll('p');
+pArray[0].textContent =siteContent['main-content']['features-content'];
+pArray[1].textContent =siteContent['main-content']['about-content'];
+pArray[2].textContent =siteContent['main-content']['services-content'];
+pArray[3].textContent =siteContent['main-content']['product-content'];
+pArray[4].textContent =siteContent['main-content']['vision-content'];
+pArray[5].textContent =siteContent['contact']['address'];
+pArray[6].textContent =siteContent['contact']['phone'];
+pArray[7].textContent =siteContent['contact']['email'];
+pArray[8].textContent =siteContent['footer']['copyright'];
+
+//H4 Content
+const titles = document.querySelectorAll('h4');
+titles[0].textContent =siteContent['main-content']['features-h4'];
+titles[1].textContent =siteContent['main-content']['about-h4'];
+titles[2].textContent =siteContent['main-content']['services-h4'];
+titles[3].textContent =siteContent['main-content']['product-h4'];
+titles[4].textContent =siteContent['main-content']['vision-h4'];
+
+//Image
+let mid = document.getElementById('middle-img');
+mid.setAttribute('src', 'img/mid-page-accent.jpg');
+
+//Add Navigation and Change color
+const parent = document.querySelector('nav');
+const linkOne = document.createElement('a');
+const linkTwo = document.createElement('a');
+
+linkOne.textContent = 'Home';
+linkTwo.textContent = 'Meet the Team';
+
+parent.appendChild(linkOne);
+parent.prepend(linkTwo);
+
+const item = document.querySelectorAll('a');
+item.forEach(element =>{
+  element.style.color = 'limegreen';
+});
